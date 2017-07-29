@@ -1,0 +1,44 @@
+{
+  "name": "wikipics-api",
+  "version": "1.0.0",
+  "description": "A simple API to obtain Wikipedia Picture of the Day",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeDotJS/wikipics-api.git"
+  },
+  "keywords": [
+    "generate",
+    "link",
+    "image",
+    "data",
+    "picture",
+    "day",
+    "year",
+    "wikipedia",
+    "archieve"
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "got": "^7.1.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  },
+  "author": "Rishi Giri <rushforlinux@gmail.com> (http://rishigiri.ml)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeDotJS/wikipics-api/issues"
+  },
+  "homepage": "https://github.com/CodeDotJS/wikipics-api#readme"
+}
