@@ -14,7 +14,7 @@ module.exports = day => {
 
 	return got(url).then(res => {
 		const $ = cheerio.load(res.body);
-		const imgSource = `https:${$('img').attr('src').replace('/thumb', '').split("/").slice(0, -1).join("/")}`;
+		const imgSource = `https:${$('img').attr('src').replace('/thumb', '').split('/').slice(0, -1).join('/')}`;
 		const imgName = imgSource.split('/').slice(-1)[0];
 		const imgData = $('.mw-body-content p').eq(0).text();
 		return {
