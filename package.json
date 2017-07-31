@@ -1,6 +1,6 @@
 {
   "name": "wikipics-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple API to obtain Wikipedia Picture of the Day!",
   "main": "index.js",
   "engines": {
