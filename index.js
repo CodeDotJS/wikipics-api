@@ -9,12 +9,12 @@ module.exports = day => {
 	let url = `https://en.wikipedia.org/wiki/Template:POTD/${day}`;
 
 	if (day === '') {
-		url = `https://en.wikipedia.org/wiki/Template:POTD`;
+		url = 'https://en.wikipedia.org/wiki/Wikipedia:Picture_of_the_day';
 	}
 
 	return got(url).then(res => {
 		const $ = cheerio.load(res.body);
-		const imgSource = `https:${$('img').attr('src').replace('thumb/', '').split('/300')[0]}`;
+		const imgSource = `https:${$('img').attr('src').replace('/thumb', '').split("/").slice(0, -1).join("/")}`;
 		const imgName = imgSource.split('/').slice(-1)[0];
 		const imgData = $('.mw-body-content p').eq(0).text();
 		return {
